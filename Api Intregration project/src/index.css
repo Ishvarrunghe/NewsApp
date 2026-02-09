@@ -1,0 +1,175 @@
+@import "tailwindcss";
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background-color: #ffffff;
+}
+
+/* ================= NAVBAR ================= */
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #b7ddeb;   /* light blue */
+  padding: 12px 30px;
+}
+
+/* Logo */
+nav h1 {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+/* Nav links */
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+nav ul a {
+  cursor: pointer;
+  font-weight: 500;
+  color: #000;
+}
+
+/* ================= SEARCH ================= */
+
+.searchBar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.searchBar input {
+  width: 220px;
+  height: 38px;
+  padding: 8px 12px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  background-color: white;
+  color: #000;
+}
+
+.searchBar input:focus {
+  border-color: #2563eb;
+}
+
+.searchBar button {
+  width: 80px;
+  height: 38px;
+  background-color: #1d4ed8;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+/* ================= HEAD TEXT ================= */
+
+.head {
+  text-align: center;
+  margin: 10px 0 10px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+/* ================= CATEGORY BUTTONS ================= */
+
+.categoryBtn {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.categoryBtn button {
+  padding: 6px 20px;
+  height: 36px;
+  background-color: rgb(255, 108, 108);
+  border: none;
+  font-size: 15px;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+}
+
+/* ================= CARDS CONTAINER ================= */
+
+.cardsContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* ek row me 3 */
+  gap: 20px;
+  padding: 20px 40px;
+}
+
+/* ================= SINGLE CARD ================= */
+
+.card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ================= IMAGE ================= */
+
+.card img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+/* ================= TEXT ================= */
+
+.title {
+  font-size: 18px;
+  font-weight: 600;
+  padding: 10px;
+}
+
+.description {
+  font-size: 14px;
+  color: #555;
+  padding: 0 10px;
+  flex-grow: 1;
+}
+
+/* ================= BUTTON ================= */
+
+.card button {
+  margin: 10px;
+  padding: 10px 10px;
+  border: none;
+  border-radius: 6px;
+  background-color: #2563eb;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* Tablet – 2 cards */
+@media (max-width: 900px) {
+  .cardsContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile – 1 card */
+@media (max-width: 600px) {
+  .cardsContainer {
+    grid-template-columns: 1fr;
+  }
+}
